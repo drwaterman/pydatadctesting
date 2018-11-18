@@ -27,5 +27,8 @@ https://docs.pytest.org
 #### Good integration practices
 https://docs.pytest.org/en/latest/goodpractices.html
  
+#### Data Science Testing Tutorial
+https://github.com/ericmjl/data-testing-tutorial
+ 
 #### Test Driven Development for Data Science
 http://engineering.pivotal.io/post/test-driven-development-for-data-science/

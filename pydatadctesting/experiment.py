@@ -59,7 +59,10 @@ def classify_posts_pipeline():
 
 
 if __name__ == "__main__":
-    print(get_time_str())
+    print("The current date time time is:", get_time_str())
+    print("If you increment 5 you get", increment(5))
+    print("The average of 3 and 10 is", average([3, 10]))
     print("A random number drawn from N(100, 25) is", generate_random_normal_dist()[0])
+    print("Running classify posts pipeline...")
     classify_posts_pipeline()
 
