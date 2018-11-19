@@ -398,7 +398,7 @@ function filter_table(elem) {
 }
 </script>
     <h1>testreport.html</h1>
-    <p>Report generated on 17-Nov-2018 at 21:26:46 by<a href="https://pypi.python.org/pypi/pytest-html"> pytest-html</a> v1.19.0</p>
+    <p>Report generated on 19-Nov-2018 at 10:02:58 by<a href="https://pypi.python.org/pypi/pytest-html"> pytest-html</a> v1.19.0</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -409,13 +409,13 @@ function filter_table(elem) {
         <td>Darwin-18.0.0-x86_64-i386-64bit</td></tr>
       <tr>
         <td>Plugins</td>
-        <td>{&apos;metadata&apos;: &apos;1.7.0&apos;, &apos;html&apos;: &apos;1.19.0&apos;, &apos;cov&apos;: &apos;2.6.0&apos;}</td></tr>
+        <td>{&apos;mpl&apos;: &apos;0.10&apos;, &apos;metadata&apos;: &apos;1.7.0&apos;, &apos;html&apos;: &apos;1.19.0&apos;, &apos;cov&apos;: &apos;2.6.0&apos;}</td></tr>
       <tr>
         <td>Python</td>
         <td>3.6.1</td></tr></table>
     <h2>Summary</h2>
-    <p>0 tests ran in 1.67 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">0 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>5 tests ran in 27.16 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">4 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">1 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -425,4 +425,95 @@ function filter_table(elem) {
           <th class="sortable numeric" col="duration">Duration</th>
           <th>Links</th></tr>
         <tr hidden="true" id="not-found-message">
-          <th colspan="4">No results found. Try to check the filters</th></tr></thead></table></body></html>
+          <th colspan="4">No results found. Try to check the filters</th></tr></thead>
+      <tbody class="xfailed results-table-row">
+        <tr>
+          <td class="col-result">XFailed</td>
+          <td class="col-name">tests/test_experiment.py::test_classify_posts_pipeline</td>
+          <td class="col-duration">25.52</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">@pytest.mark.xfail(reason=&quot;Model&#x27;s current benchmark is 0.93&quot;)<br/>    def test_classify_posts_pipeline():<br/>        grid_search = experiment.classify_posts_pipeline()<br/>&gt;       assert grid_search.best_score_ &gt; 0.95<br/><span class="error">E       AssertionError: assert 0.9393232205367561 &gt; 0.95</span><br/><span class="error">E        +  where 0.9393232205367561 = GridSearchCV(cv=&#x27;warn&#x27;, error_score=&#x27;raise-deprecating&#x27;,\n       estimator=Pipeline(memory=None,\n     steps=[(&#x27;vect&#x27;, C... &#x27;elasticnet&#x27;)},\n       pre_dispatch=&#x27;2*n_jobs&#x27;, refit=True, return_train_score=&#x27;warn&#x27;,\n       scoring=None, verbose=1).best_score_</span><br/><br/>tests/test_experiment.py:59: AssertionError<br/>----------------------------- Captured stdout call -----------------------------<br/>Fitting 3 folds for each of 24 candidates, totalling 72 fits
+Best score: 0.939
+Best parameters set:
+	clf__alpha: 1e-06
+	clf__penalty: &#x27;elasticnet&#x27;
+	vect__max_df: 0.75
+	vect__ngram_range: (1, 2)
+----------------------------- Captured stderr call -----------------------------<br/>[Parallel(n_jobs=-1)]: Using backend LokyBackend with 8 concurrent workers.
+Fatal Python error: Py_Initialize: can&#x27;t initialize sys standard streams
+OSError: [Errno 9] Bad file descriptor
+
+Current thread 0x00007fff6a4665c0 (most recent call first):
+Fatal Python error: Py_Initialize: can&#x27;t initialize sys standard streams
+OSError: [Errno 9] Bad file descriptor
+
+Current thread 0x00007fff62c445c0 (most recent call first):
+Fatal Python error: Py_Initialize: can&#x27;t initialize sys standard streams
+OSError: [Errno 9] Bad file descriptor
+
+Current thread 0x00007fff5f10b5c0 (most recent call first):
+Fatal Python error: Py_Initialize: can&#x27;t initialize sys standard streams
+OSError: [Errno 9] Bad file descriptor
+
+Current thread 0x00007fff602f85c0 (most recent call first):
+Fatal Python error: Py_Initialize: can&#x27;t initialize sys standard streams
+OSError: [Errno 9] Bad file descriptor
+
+Current thread 0x00007fff689365c0 (most recent call first):
+Fatal Python error: Py_Initialize: can&#x27;t initialize sys standard streams
+OSError: [Errno 9] Bad file descriptor
+
+Current thread 0x00007fff631a75c0 (most recent call first):
+Fatal Python error: Py_Initialize: can&#x27;t initialize sys standard streams
+OSError: [Errno 9] Bad file descriptor
+
+Current thread 0x00007fff5fc755c0 (most recent call first):
+Fatal Python error: Py_Initialize: can&#x27;t initialize sys standard streams
+OSError: [Errno 9] Bad file descriptor
+
+Current thread 0x00007fff6aa385c0 (most recent call first):
+Fatal Python error: Py_Initialize: can&#x27;t initialize sys standard streams
+OSError: [Errno 9] Bad file descriptor
+
+Current thread 0x00007fff62a685c0 (most recent call first):
+[Parallel(n_jobs=-1)]: Done  34 tasks      | elapsed:   12.5s
+[Parallel(n_jobs=-1)]: Done  72 out of  72 | elapsed:   24.0s finished
+</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_experiment.py::test_get_time_str</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_experiment.py::test_increment</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_experiment.py::test_average</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_experiment.py::test_generate_random_normal_dist</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody></table></body></html>
