@@ -6,15 +6,12 @@ This repo is a companion to the PyData DC 2018 presentation "Do Your Homework! W
 **Clone the repo, create a new virtual environment, and then:**
  
 1. Install the package requirements:
-
 `pip install -r requirements.txt`
 
 1. Install the package in editable mode:
-
 `pip install -e .`
 
 1. Run the tests:
-
 `pytest`
 
 1. Open the generated test report `tests/test-logs/testreport.html` in your browser of choice.
