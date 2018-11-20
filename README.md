@@ -15,7 +15,7 @@ This repo is a companion to the PyData DC 2018 presentation "Do Your Homework! W
 
 1. Run the tests:
 
-`./test.sh`
+`pytest`
 
 1. Open the generated test report `tests/test-logs/testreport.html` in your browser of choice.
 
